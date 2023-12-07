@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Página 3</title>
+  <style>
+    .user-info {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #fff;
+    }
+    .music-player {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+    .player-controls {
+      display: flex;
+      align-items: center;
+    }
+    .player-controls button {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+    .player-controls button:hover {
+      color: #ccc;
+    }
+    .cards-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    .card {
+      padding: 20px;
+      background-color: #f5f5f5;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card h5 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Meu Site</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Cadastro</a></li>
+          <li><a href="#">Página 2</a></li>
+          <li><a href="#">Página 3</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 user-info">
+          <span id="user-name"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 music-player">
+          <span id="current-song">Nome da música</span>
+          <div class="player-controls">
+            <button><i class="material-icons">skip_previous</i></button>
+            <button><i class="material-icons">play_arrow</i></button>
+            <button><i class="material-icons">skip_next</i></button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <h5>Artista mais executado no dia</h5>
+        </div>
+      </div>
+      <div class="row cards-container">
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <h5>Artista 1</h5>
+            <p>Informações do artista 1</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <h5>Artista 2</h5>
+            <p>Informações do artista 2</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <h5>Artista 3</h5>
+            <p>Informações do artista 3</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <h5>Artista mais tocado</h5>
+        </div>
+      </div>
+      <div class="row cards-container">
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <h5>Artista 1</h5>
+            <p>Informações do artista 1</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <h5>Artista 2</h5>
+            <p>Informações do artista 2</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <h5>Artista 3</h5>
+            <p>Informações do artista 3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <span>&copy; 2021 Meu Site. Todos os direitos reservados.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.AutoInit();
+      
+      var userName = localStorage.getItem('user-name');
+      if (userName) {
+        document.getElementById('user-name').textContent = userName;
+      }
+      
+      var currentSong = localStorage.getItem('current-song');
+      if (currentSong) {
+        document.getElementById('current-song').textContent = currentSong;
+      }
+    });
+  </script>
+</body>
+</html>

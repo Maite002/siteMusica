@@ -1,0 +1,48 @@
+
+.user-info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+}
+
+.music-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+}
+
+.player-controls button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.player-controls button:hover {
+  color: #ccc;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h5 {
+  margin-top: 0;
+}

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Página 2</title>
+  <style>
+    .user-info {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #fff;
+    }
+    .music-categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .music-category {
+      margin: 10px;
+    }
+    .music-category img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .music-category img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">ASABRANCA</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Cadastro</a></li>
+          <li><a href="#">Escolha de estilos musicais</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 user-info">
+          <span id="user-name"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <h4 style="color: #ff6f00;">Escolha seus estilos musicais</h4>
+        </div>
+      </div>
+      <div class="row music-categories">
+        <div class="col s12 m6 l4 music-category">
+          <a href="pagina3/index.html">
+              <img src="imagens/rock.jpg" alt="Rock">
+          </a>
+        </div>
+        <div class="col s12 m6 l4 music-category">
+          <a href="pagina3/index.html">
+              <img src="imagens/kpop.jpg" alt="kpop">
+          </a>
+        </div>
+        <div class="col s12 m6 l4 music-category">
+          <a href="pagina3/index.html">
+              <img src="imagens/eletronic.jpg" alt="eletronic">
+          </a>
+        </div>
+        <div class="col s12 m6 l4 music-category">
+          <a href="pagina3/index.html">
+              <img src="imagens/jazz.jpg" alt="Jazz">
+          </a>
+        </div>
+        <div class="col s12 m6 l4 music-category">
+          <a href="pagina3/index.html">
+              <img src="imagens/hip-hop.jpg" alt="Hip Hop">
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <span>&copy; 2021 ASABRANCA. Todos os direitos reservados.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.AutoInit();
+      
+      var userName = localStorage.getItem('user-name');
+      if (userName) {
+        document.getElementById('user-name').textContent = userName;
+      }
+    });
+  </script>
+</body>
+</html>
